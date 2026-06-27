@@ -1,4 +1,4 @@
-# 🧊 Frigório — Sistema de Monitoramento Inteligente de Câmara Fria
+# Sistema de Monitoramento Inteligente de Câmara Fria
 
 > Monitoramento IoT em tempo real com detecção de anomalias via Isolation Forest e análise por LLM.
 
@@ -6,7 +6,7 @@
 
 ## 📌 Visão Geral
 
-O **Frigório** é um sistema de monitoramento IoT para câmaras frias desenvolvido como projeto acadêmico. Um ESP32 com sensor DHT22 coleta temperatura e umidade internas a cada 10 segundos e envia os dados para uma API FastAPI, que aplica um modelo de Machine Learning (Isolation Forest) para classificar o estado da câmara em tempo real. Uma dashboard web exibe o estado consolidado e permite a um operador simular variáveis externas (temperatura ambiente, umidade e estado da porta). Uma análise em linguagem natural pode ser solicitada via integração com LLM.
+O presente repositório é um sistema de monitoramento IoT para câmaras frias desenvolvido como projeto acadêmico. Um ESP32 com sensor DHT22 coleta temperatura e umidade internas a cada 10 segundos e envia os dados para uma API FastAPI, que aplica um modelo de Machine Learning (Isolation Forest) para classificar o estado da câmara em tempo real. Uma dashboard web exibe o estado consolidado e permite a um operador simular variáveis externas (temperatura ambiente, umidade e estado da porta). Uma análise em linguagem natural pode ser solicitada via integração com LLM.
 
 ### Funcionalidades
 
@@ -44,7 +44,8 @@ O **Frigório** é um sistema de monitoramento IoT para câmaras frias desenvolv
 ## 📁 Estrutura do Projeto
 
 ```
-frigorio/
+
+sistema-monitoramento-camara-fria/
 ├── README.md
 ├── .gitignore
 │
@@ -78,13 +79,9 @@ frigorio/
     └── simulator.py                  # Simula o ESP32 via HTTP para testes
 ```
 
-> **Nota:** A pasta `api/app/model/` não é versionada (`.gitignore`). O modelo deve ser gerado localmente executando o notebook em `ml/` e copiado para esse diretório antes de iniciar a API.
-
 ---
 
 ## 📸 Screenshots da Dashboard
-
-<!-- Adicione capturas de tela aqui -->
 
 ### Visão Geral
 ![Dashboard — Visão Geral](docs/screenshots/sem-anomalia.png)
